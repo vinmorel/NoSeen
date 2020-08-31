@@ -16,6 +16,9 @@ The below is the basic popup user interface
 
 ![](/assets/popup.png) 
 
+## How it works
+When a user is on a facebook page, a script launches and listens to mutations in the DOM. On every change, it scans and removes specific elements related to the message reception feature.   
+
 ## Installation
 
 #### Clone
