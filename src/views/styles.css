@@ -1,0 +1,129 @@
+@font-face {
+    font-family: Tienne;
+    src: url(./fnt/Tienne-Regular.ttf);
+  }
+
+@font-face {
+    font-family: YaldeviColombo-Light;
+    src: url(./fnt/YaldeviColombo-Light.ttf);
+  }
+
+@font-face {
+    font-family: YaldeviColombo-SemiBold;
+    src: url(./fnt/YaldeviColombo-SemiBold.ttf);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+}
+
+h1 {
+    font-family: Tienne;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;
+}
+
+h1.header {
+    padding-top: 3%;
+    padding-left: 6%;
+}
+
+h2 {
+    font-family: YaldeviColombo-SemiBold;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h3 {
+    font-family: Tienne;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 9px;
+}
+
+.frame {
+    width: 230px;
+    height: 115px;
+}
+
+.container {
+    padding-top: 3%; 
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.intro {
+    display: flex;
+    width: 71.4%;
+    height: 48%;
+    margin: auto;
+    align-items: center;
+}
+
+.im {
+    width: 50px;
+    height: 50px;
+}
+
+.line {
+    width: 71.4%;
+    margin: auto;
+    margin-top : 0%;
+    border-top: 1px solid black;
+}
+
+.btn_container {  
+    padding-top: 3%;  
+    margin: auto;
+}
+
+.button {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: YaldeviColombo-Light;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 15.05%;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #e7e7e7;
+}
+
+.green {
+    width: 100%;
+    font-family: YaldeviColombo-SemiBold;
+    font-weight: normal;
+    font-style: normal;
+    color: green;
+}
+
+.red {
+    width: 100%;
+    font-family: YaldeviColombo-SemiBold;
+    font-weight: normal;
+    font-style: normal;
+    color: #E60000;
+}
+
+.credits{
+    width : 29%;
+    height: 18%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: black;
+    margin: auto;
+}
+

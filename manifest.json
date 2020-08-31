@@ -1,0 +1,48 @@
+{
+  "name": "NoSeen",
+  "version": "0.1.19",
+  "description": "Blocks Facebook message reception feature.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "icons": {
+    "16": "./src/img/icon2_16.png",
+    "32": "./src/img/icon2_32.png",
+    "48": "./src/img/icon2_48.png",
+    "128": "./src/img/icon2_128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "./src/img/icon2_16.png",
+      "32": "./src/img/icon2_32.png",
+      "48": "./src/img/icon2_48.png",
+      "128": "./src/img/icon2_128.png"
+    },
+    "default_title": "NoSeen",
+    "default_popup": "./src/views/popup.html"
+  },
+  "background": {
+    "scripts": ["./src/js/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [ "https://*.facebook.com/*" ],
+      "exclude_matches": [ "*://*/messages/t/*" ],
+      "js": [ "./src/js/fb_content_script.js" ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [ "https://*.facebook.com/messages/*" ],
+      "exclude_matches": [ "https://*.facebook.com/messages/t/*?*" ],
+      "js": [ "./src/js/redirect.js", "./src/js/msng_content_script.js" ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [ "https://*.facebook.com/messages/t/*?*", "https://*.messenger.com/*"],
+      "js": [ "./src/js/msng_content_script.js" ],
+      "run_at": "document_start"
+    }
+  ],
+  "manifest_version": 2
+}
