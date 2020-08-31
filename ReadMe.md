@@ -12,8 +12,7 @@ NoSeen is a Chromium extension that removes the client side message reception fe
 - Fast and lean implementation
 
 ## View
-The below is the basic popup user interface :\
-\
+The below is the basic popup user interface :
 
 ![](/assets/popup.png) 
 
