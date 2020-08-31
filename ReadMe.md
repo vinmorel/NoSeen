@@ -4,7 +4,7 @@
 \
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-NoSeen is a Chromium extension that removes the client side message reception feature from Facebook and its affiliate sites.  
+_NoSeen is a Chromium extension that removes the client side message reception feature from Facebook and its affiliate sites._
 
 ### Features  :smiley:
 - Works on facebook.com, messenger.com, m.facebook.com
@@ -12,7 +12,7 @@ NoSeen is a Chromium extension that removes the client side message reception fe
 - Fast and lean implementation
 
 ## View
-The below is the basic popup user interface :
+The below is the basic popup user interface
 
 ![](/assets/popup.png) 
 
