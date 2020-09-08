@@ -26,7 +26,15 @@ async function on_load(){
         var popup_chat_list_seen = window.document.querySelectorAll('[role="cell"]:not(circle)');
         RemoveElement(popup_chat_list_seen, window.document);
         var group_chat_elements = window.document.querySelectorAll(".i4qgphn6");
-        RemoveElement(group_chat_elements, window.document);
+        RemoveElement(group_chat_elements, window.document);    
+
+        // hide last online if checked in options
+        chrome.storage.sync.get('OnlineCheck', data2 => {
+            if (data2.OnlineCheck) {
+                var last_online_time = window.document.querySelectorAll(".j1meafb1")
+                RemoveElement(last_online_time, window.document)
+            }
+        });
     };
 
     observer.observe(fb_global_container, { subtree: true, attributes: true });
@@ -50,12 +58,8 @@ async function on_load(){
 }
 
 // call if enabled
-chrome.storage.local.get('enabled', data => {
+chrome.storage.sync.get('enabled', data => {
     if (data.enabled) {
-        console.log('enabled')
         on_load();
-    } else {
-        console.log('disabled')
-    }
+    } 
 });
-

@@ -26,13 +26,21 @@ async function on_load(){
         RemoveElement(elements, window.document);
         var elements = window.document.querySelectorAll('[aria-roledescription="Status icon"]');
         RemoveElement(elements, window.document);
+
+        // hide last online if checked in options
+        chrome.storage.sync.get('OnlineCheck', data2 => {
+            if (data2.OnlineCheck) {
+                var last_online_time = window.document.querySelectorAll("._2v6o")
+                RemoveElement(last_online_time, window.document)
+            }
+        });
     };
 
     observer.observe(msng_global_container, { subtree: true, attributes: true });
 }
 
 // call if enabled
-chrome.storage.local.get('enabled', data => {
+chrome.storage.sync.get('enabled', data => {
     if (data.enabled) {
         on_load();
     } 

@@ -3,7 +3,7 @@ var myButton = document.getElementById('toggle');
 var Status = document.getElementById('status');
 
 // update button dynamically
-chrome.storage.local.get('enabled', data => {
+chrome.storage.sync.get('enabled', data => {
     console.log(data.enabled)
     enabled = !!data.enabled;
     enabled ? Status.className = "green" : Status.className = "red";
@@ -16,7 +16,7 @@ myButton.onclick = () => {
     enabled = !enabled;
     enabled ? Status.className = "green" : Status.className = "red";
     Status.textContent = enabled ? 'Active' : 'Paused';
-    chrome.storage.local.set({'enabled':enabled}, function(){
+    chrome.storage.sync.set({'enabled':enabled}, function(){
     });
 
     // reload page if a tab is open on facebook

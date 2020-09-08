@@ -1,5 +1,5 @@
 // redirect when page accessed explicitly if ext enabled
-chrome.storage.local.get('enabled', data => {
+chrome.storage.sync.get('enabled', data => {
     if (data.enabled) {
         var observer = new MutationObserver(function () {
             if (window.document.body) {

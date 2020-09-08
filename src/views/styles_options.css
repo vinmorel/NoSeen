@@ -1,0 +1,82 @@
+@font-face {
+    font-family: Tienne;
+    src: url(./fnt/Tienne-Regular.ttf);
+  }
+
+@font-face {
+    font-family: YaldeviColombo-Light;
+    src: url(./fnt/YaldeviColombo-Light.ttf);
+  }
+
+@font-face {
+    font-family: YaldeviColombo-SemiBold;
+    src: url(./fnt/YaldeviColombo-SemiBold.ttf);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.im {
+    width: 50px;
+    height: 50px;
+}
+
+h1 {
+    font-family: Tienne;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+}
+
+h1.header {
+    padding-left: 1%;
+}
+
+.general_container {
+    width: 75%;
+    padding-top: 4%;  
+    margin: auto;
+}
+
+.intro {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    padding-bottom: 1%;
+    border-bottom: 1px solid black;
+}
+
+.options {
+    padding-top: 2%;
+    padding-left: 1%;
+}
+
+.oc {
+    font-family: YaldeviColombo-SemiBold;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    padding-left: 1%;
+}
+
+.notif {
+    padding-top: 1%;
+}
+
+.btn {
+    border: 1px solid rgb(161, 159, 159);;; 
+    outline: none;
+    font-family: YaldeviColombo-SemiBold;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    text-align: center;
+    padding: 0.4%;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #e7e7e7;
+}
