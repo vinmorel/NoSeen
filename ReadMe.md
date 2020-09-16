@@ -6,7 +6,7 @@
 
 _NoSeen is a Chromium extension that removes the client side message reception feature from Facebook and its affiliate sites._
 
-### Features  :smiley:
+## Features  :smiley:
 - Works on facebook.com, messenger.com, m.facebook.com
 - Toggle on/off from taskbar 
 - Toggle last active from options
